@@ -217,7 +217,7 @@ module {{field_trip_insurance}}::pool {
 
 ## 🖼 Attachments
 
-- <img width="455" height="643" alt="image" src="https://github.com/user-attachments/assets/dfea82e6-1a2f-4747-8e82-9c7d4860036b" />
+<img width="455" height="643" alt="Screenshot 2025-08-16 151516" src="https://github.com/user-attachments/assets/a05b1a4a-8239-4999-9041-4f686f1f4933" />
 
 
 If desired, share the exact package/account address (sender/owner from the publish) and this README will be auto‑filled with the concrete address throughout.
