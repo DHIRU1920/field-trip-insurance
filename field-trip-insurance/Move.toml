@@ -1,0 +1,16 @@
+[package]
+name = "FieldTripInsurance"
+version = "1.0.0"
+authors = ["YourName <your.email@example.com>"]
+
+[addresses]
+MyModule = "0x84ffb05f440ef7ede350bbe904445ab142ef90e1223bacd173dc75e66818f1f8"
+
+[dev-addresses]
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-core.git"
+rev = "mainnet"
+subdir = "aptos-move/framework/aptos-framework"
+
+[dev-dependencies]
