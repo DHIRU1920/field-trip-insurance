@@ -1,118 +1,46 @@
 ```markdown
-# Field Trip Insurance Smart Contract 🏫
+# 🏫 Field Trip Insurance — Aptos Move Smart Contract
 
-Insure school field trips with transparent, rules-based payouts on the Aptos blockchain. Participants contribute premiums; an authorized trip leader processes claims within preset limits. Simple. Auditable. Fast.
+## 🌟 Description
+A lightweight, trust-minimized insurance pool for school field trips on the Aptos blockchain. Participants contribute premiums to a pool owned by the organizer, and an authorized trip leader executes claim payouts within predefined caps. The contract enforces:
+- Authorization (only the trip leader can approve payouts)
+- Safety limits (max payout per claim)
+- Solvency checks (cannot pay more than collected premiums)
 
----
-
-## ✨ Features
-
-- ✅ Create insurance pools with an authorized trip leader
-- ✅ Multiple participants can contribute premiums
-- ✅ Secure claim processing with authorization checks
-- ✅ Maximum payout limits and balance validation
-- ✅ Read-only view functions for transparent state
-- ✅ Comprehensive unit tests (8 scenarios)
+Transparent. Auditable. Instant.
 
 ---
 
-## 📚 Contract Surface
-
-- Entry functions
-  - `create_insurance_pool(creator, trip_leader, max_payout)`
-  - `contribute_premium(participant, pool_owner, amount)`
-  - `request_payout(leader, pool_owner, recipient, amount)`
-
-- View functions
-  - `pool_exists(pool_owner) -> bool`
-  - `get_pool_info(pool_owner) -> (total_premiums, trip_leader, max_payout)`
-  - `get_total_premiums(pool_owner) -> u64`
-  - `get_max_payout(pool_owner) -> u64`
-  - `get_trip_leader(pool_owner) -> address`
+## 🚀 Vision
+Empower educators and organizers with a seamless, on-chain insurance experience:
+- Replace paperwork-heavy claims with code-enforced rules
+- Provide real-time transparency of balances and limits
+- Enable fast, accountable reimbursements during trips
+- Offer a reusable blueprint for event-based community insurance
 
 ---
 
-## 🗂️ Project Structure
-
-```
-field-trip-insurance/
-├─ Move.toml
-├─ sources/
-│  └─ FieldTripInsurance.move
-└─ tests/
-   └─ field_trip_insurance_tests.move   (or tests embedded in module)
-```
+## 🔭 Future Scope
+- Multi-asset support (beyond AptosCoin)
+- On-chain events for contributions and payouts (indexer-ready)
+- Governance to update leader, caps, and pool status
+- Refund policy for unused premiums after trip completion
+- Role-based co-leaders and emergency controls
+- Claim metadata and auditable claim registry
+- Web dashboard (Next.js) for non-technical users
 
 ---
 
-## ⚙️ Quick Start
+## 📜 Contract Address
+Paste your deployed module address below after publishing.
 
-1) Install Aptos CLI and set up a profile
-
-2) Configure addresses
-- Open `Move.toml` and set the `MyModule` address to the deploying account
-
-3) Build & test
 ```
-aptos move test
+Transaction :- 0x222aa53840ac008b756ebaaaf8862457765e6e9ab8c87f3e82c5f50b5b4f1161
 ```
 
-4) Publish to devnet/testnet
-```
-aptos move publish --profile devnet
-```
+Tip:
+- Ensure this matches the address in `[addresses]` (e.g., `MyModule`) in your Move.toml.
+- On publish, copy the printed address from the CLI and update here.
 
 ---
-
-## 🧪 Testing
-
-Covers:
-- Pool creation
-- Premium contributions
-- Successful payout
-- Rejections for unauthorized leader, exceeding max payout, insufficient premiums
-- Multi-participant, multi-claim flow
-
-Run:
-```
-aptos move test
-```
-
-Expected:
-```
-Test result: OK. Total tests: 8; passed: 8; failed: 0
-```
-
----
-
-## 🔐 Security Model
-
-- Only the configured trip leader can request payouts
-- Claim amount must be ≤ `max_payout` and ≤ `total_premiums`
-- Uses `AptosCoin` for simplicity; can be generalized to other coins
-- Consider a dedicated custodial pool account for production deployments
-
----
-
-## 🛣️ Roadmap
-
-- Support custom fungible assets
-- Emit events for contributions and payouts
-- Refund policy for unused premiums
-- Admin functions to update leader and limits with governance
-- Next.js dashboard for non-technical users
-
----
-
-## 🤝 Contributing
-
-- Issues and PRs welcome—please include tests
-- Keep functions small and explicit
-- Follow Move and Aptos best practices
-
----
-
-## 🧾 License
-
-MIT — use freely and build safer trips on-chain.
 ```
