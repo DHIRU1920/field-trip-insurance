@@ -42,5 +42,8 @@ Tip:
 - Ensure this matches the address in `[addresses]` (e.g., `MyModule`) in your Move.toml.
 - On publish, copy the printed address from the CLI and update here.
 
+
 ---
+<img width="455" height="643" alt="image" src="https://github.com/user-attachments/assets/c3dd37d9-1201-434a-a0eb-c5c4d835ebb0" />
+
 ```
